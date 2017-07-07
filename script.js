@@ -38,9 +38,11 @@ class JazzCreator {
 
 		let i = 0;
 
+		const seed = Math.random();
+
 		while(this.started == true) {
 			const sin = Math.abs(Math.sin(i++));
-			const scaleNote = Math.round(sin * 100) % beebop.length;
+			const scaleNote = Math.round(sin * 10000 * seed) % beebop.length;
 			const duration = (2 ** (Math.round(sin * 400) % 3)) * 100;
 			const note = beebop[scaleNote];
 
