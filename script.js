@@ -25,7 +25,7 @@ class JazzCreator {
 		async function playNote(i, ms) {
 			const osc = ctx.createOscillator();
 
-			osc.type = "sine";
+			osc.type = "triangle";
 			osc.frequency.value = notes[i];
 
 			osc.connect(ctx.destination);
